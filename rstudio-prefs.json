@@ -1,0 +1,20 @@
+{
+    "jobs_tab_visibility": "closed",
+    "check_for_updates": false,
+    "save_workspace": "never",
+    "initial_working_directory": "~/data",
+    "num_spaces_for_tab": 4,
+    "auto_detect_indentation": true,
+    "reindent_on_paste": false,
+    "highlight_selected_line": true,
+    "highlight_r_function_calls": true,
+    "rainbow_parentheses": true,
+    "auto_append_newline": true,
+    "show_help_tooltip_on_idle": true,
+    "insert_spaces_around_equals": false,
+    "help_font_size_points": 12,
+    "font_size_points": 12,
+    "posix_terminal_shell": "bash",
+    "always_save_history": false,
+    "show_terminal_tab": false
+}

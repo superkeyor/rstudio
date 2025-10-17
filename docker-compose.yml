@@ -1,0 +1,17 @@
+services:
+    # https://rocker-project.org/images/versioned/rstudio.html
+    rstudio:
+        image: superkeyor/rstudio:latest
+        # image: rocker/rstudio:4.3.2
+        container_name: rstudio
+        ports:
+            - "8787:8787"
+        environment:
+            PASSWORD: rstudio  # user is rstudio
+            ROOT: true  # add rstudio user to sudoers
+            DISABLE_AUTH: true #
+        volumes:
+            # /home/rstudio is ~ because user is rstudio
+            # config is packaged in the image, do not remap if unnecessary
+            # - ./rstudio/.rstudio_config:~/.config/rstudio
+            - ./rstudio/data:~/data

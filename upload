@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+csd="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+cd "$csd"
+
+# Git operations
+# git config --global --add safe.directory .
+# git reset --hard   # discard local changes
+# git pull git@github.com:/superkeyor/rstudio.git
+git add -A 
+git commit -m 'update'
+git push git@github.com:/superkeyor/rstudio.git
+
+# Docker operations
+if [[ $(command -v docker) != "" ]]; then
+    # sudo docker build --tag rstudio .
+    # sudo docker image tag rstudio superkeyor/rstudio:latest  # additional tag following Docker Hub naming convention
+    # sudo docker build --tag superkeyor/rstudio:latest .
+    # sudo docker image push superkeyor/rstudio:latest
+    sudo docker buildx build --platform linux/amd64,linux/arm64 -t superkeyor/rstudio:latest . --push
+fi
