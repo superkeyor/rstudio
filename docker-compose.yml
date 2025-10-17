@@ -13,5 +13,5 @@ services:
         volumes:
             # /home/rstudio is ~ because user is rstudio
             # config is packaged in the image, do not remap if unnecessary
-            # - ./rstudio/.rstudio_config:~/.config/rstudio
-            - ./rstudio/data:~/data
+            # - ./rstudio/.rstudio_config:~/home/rstudio/.config/rstudio
+            - ./rstudio/data:/home/rstudio/data
