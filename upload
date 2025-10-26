@@ -14,7 +14,7 @@ git push git@github.com:/superkeyor/rstudio.git
 if [[ $(command -v docker) != "" ]]; then
     # sudo docker build --tag rstudio .
     # sudo docker image tag rstudio superkeyor/rstudio:latest  # additional tag following Docker Hub naming convention
-    # sudo docker build --tag superkeyor/rstudio:latest .
-    # sudo docker image push superkeyor/rstudio:latest
-    sudo docker buildx build --platform linux/amd64,linux/arm64 -t superkeyor/rstudio:latest . --push
+    sudo docker build --tag superkeyor/rstudio:latest .
+    sudo docker image push superkeyor/rstudio:latest
+    # sudo docker buildx build --platform linux/amd64,linux/arm64 -t superkeyor/rstudio:latest . --push
 fi
